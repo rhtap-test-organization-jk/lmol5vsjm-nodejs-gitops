@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: lmol5vsjm-nodejs 
+  janus-idp.io/tekton: lmol5vsjm-nodejs
+  backstage.io/kubernetes-id: lmol5vsjm-nodejs
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: lmol5vsjm-nodejs
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
